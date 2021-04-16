@@ -32,3 +32,6 @@ def enviar_mensagem(mensagens):
             campo_mensagem[1].send_keys(mensagem)
             campo_mensagem[1].send_keys(Keys.ENTER)
 
+if __name__ == '__main__':
+    buscar_contato(contato)
+    enviar_mensagem(mensagens)
