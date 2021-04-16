@@ -21,3 +21,14 @@ def buscar_contato(contato):
     campo_pesquisa.send_keys(contato)
     campo_pesquisa.send_keys(Keys.ENTER)
     time.sleep(5)
+
+#Campo de pesquisa 'copyable-text selectable-text'
+#Campo de texto 'copyable-text selectable-text'
+def enviar_mensagem(mensagens):
+    for mensagem in mensagens:
+        for i in range(0, 1):
+            campo_mensagem = driver.find_elements_by_xpath('//div[contains(@class,"copyable-text selectable-text")]')
+            campo_mensagem[1].click()
+            campo_mensagem[1].send_keys(mensagem)
+            campo_mensagem[1].send_keys(Keys.ENTER)
+
