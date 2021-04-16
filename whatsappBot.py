@@ -14,3 +14,10 @@ contato = ['Contato']
 mensagens = [ 'menssagem1', 'mensssagem2', 'messagem3']
 
 #Buscar contatos/grupos
+def buscar_contato(contato):
+    campo_pesquisa = driver.find_element_by_xpath('//div[contains(@class,"copyable-text selectable-text")]')
+    time.sleep(3)
+    campo_pesquisa.click()
+    campo_pesquisa.send_keys(contato)
+    campo_pesquisa.send_keys(Keys.ENTER)
+    time.sleep(5)
